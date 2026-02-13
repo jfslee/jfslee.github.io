@@ -1,0 +1,8 @@
+body {background:#000;margin-top:5%;margin-bottom:5%;color:#ccc;font-size:28px;font-family:Source Sans Pro;font-weight:200;text-align:center;line-height:150%;user-select:none;}
+b {font-weight:400}
+h1 {font-size:64px;font-weight:200}
+h2 {font-size:36px;font-weight:400}
+a {color:#ccc;text-decoration:none}
+#l {font-size:16px}
+#l,#ta,#tb,#tc,#td {display:none}
+#footer {position:fixed;top:80%;right:0;left:0}
