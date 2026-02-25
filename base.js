@@ -16,7 +16,7 @@ function hue_ui(d,ids,t){
 function main(){
   const d = new Date();
   hue_ui(d,['pp','m4a','m4b','m4c','m4d'],137)
-  requestAnimationFrame(ui_main)}
+  requestAnimationFrame(main)}
 
 function rs() {
   var w = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
