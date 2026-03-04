@@ -1,6 +1,7 @@
-function k(id){var e=document.getElementById(id);e.style.display='none';}
-function s(id){var e=document.getElementById(id);e.style.display='block';}
-function phase(id){var e=document.getElementById(id);if(e.style.display=='none'){s(id);}else{k(id);}}
+function e(i){return document.getElementById(i)}
+function k(i){e(i).style.display='none';}
+function s(i){e(i).style.display='block';}
+function phase(i){e(i).style.display=='none'?s(i):k(i)}
 
 function cc(n,x){n = document.getElementById(n);
   if (n.nodeName == 'svg') {n.style.fill=x}
@@ -12,7 +13,8 @@ function sh(h){return(Math.max(0,h-510)-Math.max(0,h-765)-Math.max(0,h-1275));}
 function hc(h){return new Array(3).fill().map((x,i)=>sh(ch(h+(510*i))))}
 function hue(h){return "rgb("+hc(h).join(",")+")"}
 
-function ui(i,x,a) {var e = document.getElementById(i); typeof(a)!='undefined'?e.setAttribute(a,x):e.innerHTML=x}
+function ui(i,x,a) {var l = e(i); typeof(a)!='undefined'?l.setAttribute(a,x):l.innerHTML=x}
+function ut(i) {return e(i).innerText}
 function ui_hue(d,ids,t){
   if (typeof ids=='string') {ids=[ids]}
   var h=d.getTime()/t; var l=ids.length;
@@ -31,5 +33,5 @@ function rs() {
 }
 
 ui('year',new Date().getFullYear());
-ui('em',"mailto:"+"me"+"@"+"joshl.ee",'href');
-rs();main();
+ui('em',"mailto:"+['me',ut('h')].join('@'),'href');
+rs();k('l');main();
