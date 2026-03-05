@@ -1,8 +1,9 @@
 function e(i){return document.getElementById(i)}
 function x(v){return typeof(v)!='undefined'}
-function k(i){e(i).style.display='none';}
-function s(i){e(i).style.display='block';}
-function phase(i){e(i).style.display=='none'?s(i):k(i)}
+function k(i){e(i).style.display='none'}
+function s(i){e(i).style.display='block'}
+function sk(i,a){if(!e(a)){a=['ta','tb','tc','td']}a.forEach(x=>k(x));s(i)}
+function ph(i){e(i).style.display=='none'?s(i):k(i)}
 
 function cc(i,x){var n = e(i);
   if (n.nodeName == 'svg') {n.style.fill=x}
