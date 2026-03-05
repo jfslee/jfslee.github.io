@@ -27,7 +27,7 @@ function main() {uh(new Date(),['pp','m4a','m4b','m4c','m4d'],137);requestAnimat
 function rs() {
   var w = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
   var h = (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
-  var pw = 800; var ph = 800;
+  var pw = 600; var ph = 800;
   document.body.style.zoom = Math.min(w/pw,h/ph);
 }
 
