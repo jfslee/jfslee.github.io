@@ -6,7 +6,7 @@ function sk(i,a){if(!e(a)){a=['ta','tb','tc','td']}a.forEach(x=>k(x));s(i)}
 function ph(i){e(i).style.display=='none'?s(i):k(i)}
 
 function cc(i,x){var n = e(i);
-  if (n.nodeName == 'svg') {n.style.fill=x}
+  if (n.nodeName == 'svg') {n.style.stroke=x}
   else {n.style.color=x;
     if (n.getElementsByTagName('svg').length==1) {n.getElementsByTagName('svg')[0].style.fill=x}}}
 
@@ -15,8 +15,8 @@ function sh(h){return(Math.max(0,h-510)-Math.max(0,h-765)-Math.max(0,h-1275));}
 function hc(h){return new Array(3).fill().map((x,i)=>sh(ch(h+(510*i))))}
 function hu(h){return "rgb("+hc(h).join(",")+")"}
 
-function ui(i,v,a) {x(a)?e(i).setAttribute(a,v):e(i).innerHTML=v}
-function ut(i) {return e(i).innerText}
+function ui(i,v,a){x(a)?e(i).setAttribute(a,v):e(i).innerHTML=v}
+function ut(i){return e(i).innerText}
 function uh(d,ids,t){
   if (typeof ids=='string') {ids=[ids]}
   var h=d.getTime()/t; var l=ids.length;
