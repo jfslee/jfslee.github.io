@@ -22,6 +22,8 @@ function uh(d,ids,t){
   var h=d.getTime()/t; var l=ids.length;
   ids.forEach((n,i) => cc(n,hu(h-(i/l*1530))))}
 
+function b(x){document.body.style.background=x}
+
 function main() {uh(new Date(),['pp','m4a','m4b','m4c','m4d'],137);requestAnimationFrame(main)}
 
 function rs() {
@@ -33,4 +35,6 @@ function rs() {
 
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ut('h')].join('@'),'href');
-rs();k('l');main();
+rs();k('l');
+b("#000 url('bg/01.webp') center / cover no-repeat");
+main();
