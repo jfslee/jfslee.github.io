@@ -15,6 +15,7 @@ function sh(h){return(Math.max(0,h-510)-Math.max(0,h-765)-Math.max(0,h-1275));}
 function hc(h){return new Array(3).fill().map((x,i)=>sh(ch(h+(510*i))))}
 function hu(h){return "rgb("+hc(h).join(",")+")"}
 
+
 function ui(i,v,a){x(a)?e(i).setAttribute(a,v):e(i).innerHTML=v}
 function ut(i){return e(i).innerText}
 function uh(d,ids,t){
@@ -23,6 +24,8 @@ function uh(d,ids,t){
   ids.forEach((n,i) => cc(n,hu(h-(i/l*1530))))}
 
 function b(x){document.body.style.background=x}
+function ri(x){return Math.trunc(Math.random()*x)+1}
+function rb(x){b("#000 url('bg/"+ri(x).toString().padStart(2,'0')+".webp') center / cover no-repeat")}
 
 function main() {uh(new Date(),['pp','m4a','m4b','m4c','m4d'],137);requestAnimationFrame(main)}
 
@@ -35,6 +38,4 @@ function rs() {
 
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ut('h')].join('@'),'href');
-rs();k('l');
-b("#000 url('bg/01.webp') center / cover no-repeat");
-main();
+rs();k('l');main();rb(6);
