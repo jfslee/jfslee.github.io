@@ -15,7 +15,6 @@ function sh(h){return(Math.max(0,h-510)-Math.max(0,h-765)-Math.max(0,h-1275));}
 function hc(h){return new Array(3).fill().map((x,i)=>sh(ch(h+(510*i))))}
 function hu(h){return "rgb("+hc(h).join(",")+")"}
 
-
 function ui(i,v,a){x(a)?e(i).setAttribute(a,v):e(i).innerHTML=v}
 function ut(i){return e(i).innerText}
 function uh(d,ids,t){
@@ -38,4 +37,5 @@ function rs() {
 
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ut('h')].join('@'),'href');
-rs();k('l');main();rb(6);
+rs();k('l');main();
+if(!ut('h').startsWith('404')){rb(6)}
