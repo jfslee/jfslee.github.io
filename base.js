@@ -20,7 +20,18 @@ function uh(d,ids){
   if (typeof ids=='string') {ids=[ids]}
   var l=ids.length; ids.forEach((n,i) => cc(n,hu(d-(i/l*1530))))}
 
-function b(n){document.body.style.background="#000 url('bg/"+n.toString().padStart(2,'0')+".webp') center / cover no-repeat"}
+function b(n){
+  d.bx = true; var im = new Image(); 
+  var iu = "bg/"+n.toString().padStart(2,'0')+".webp";
+  im.onload = function(){
+    var ib = document.createElement('div');ib.className='bg';
+    ib.style.background="#000 url('"+iu+"') center / cover no-repeat";
+    document.body.appendChild(ib);
+    window.getComputedStyle(ib).opacity;
+    ib.style.opacity='1';
+    setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});d.bx=false},1000)}
+  im.src=iu}
+
 function ri(n){return Math.trunc(Math.random()*n)+1}
 function rb(n){if(d.bx){return} d.bl=d.bc;
   var bm = Object.entries(db).map(e=>[e[0],e[1].pr])
