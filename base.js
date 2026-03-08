@@ -16,18 +16,18 @@ function hc(h){return new Array(3).fill().map((x,i)=>sh(ch(h+(510*i))))}
 function hu(h){return "rgb("+hc(h).join(",")+")"}
 
 function ui(i,v,a){return x(v)?x(a)?e(i).setAttribute(a,v):e(i).innerHTML=v:e(i).innerText}
-function uh(d,ids,t){
+function uh(d,ids){
   if (typeof ids=='string') {ids=[ids]}
-  var h=d.getTime()/t; var l=ids.length;
-  ids.forEach((n,i) => cc(n,hu(h-(i/l*1530))))}
+  var l=ids.length; ids.forEach((n,i) => cc(n,hu(d-(i/l*1530))))}
 
 function b(x){document.body.style.background="#000 url('bg/"+x.toString().padStart(2,'0')+".webp') center / cover no-repeat"}
 function ri(x){return Math.trunc(Math.random()*x)+1}
-function rb(x){
+function rb(x){if(d.bx){return}
   d.bl=d.bc; while(d.bc==d.bl){d.bc=ri(x)}
   d.bs.add(d.bc); b(d.bc)}
+function rp(x){rb(x)}
 
-function main() {uh(new Date(),d.vs,137);requestAnimationFrame(main)}
+function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0),d.vs);requestAnimationFrame(m)}
 
 function rs() {
   var w = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
@@ -36,10 +36,11 @@ function rs() {
 
 var d = {
   pw:700,ph:800,
+  ms:1,mf:0,m0:new Date().getTime(),
   ts:['ta','tb','tc','td'],vs:['pp','va','vb','vc','vd'],
-  ba:6,bb:18,bc:0,bl:0,bs:new Set()}
+  ba:6,bb:18,bc:0,bl:0,bs:new Set(),bx:false}
 
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
 if(ui('h').startsWith('404')) {d.vs.splice(3,2)} else {rb(d.ba)}
-rs();k('l');main();
+rs();k('l');m();
