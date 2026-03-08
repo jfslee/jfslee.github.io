@@ -38,7 +38,7 @@ db={
 10:{
   name:"dreaming",
   loc:"Ulur&#x0331;u-Kata Tjut&#x0331;a National Park",
-  pr:2000},
+  pr:2},
 11:{
   name:"return",
   loc:"Sydney Airport Gateway",
