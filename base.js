@@ -2,7 +2,7 @@ function e(i){return document.getElementById(i)}
 function x(v){return typeof(v)!='undefined'}
 function k(i){e(i).style.display='none'}
 function s(i){e(i).style.display='block'}
-function sk(i,a){if(!e(a)){a=d.ts}a.forEach(x=>k(x));s(i)}
+function sk(i,a){if(!e(a)){a=d.st}a.forEach(x=>k(x));s(i)}
 function ph(i){e(i).style.display=='none'?s(i):k(i)}
 
 function cc(i,x){var n = e(i);
@@ -20,14 +20,13 @@ function uh(d,ids){
   if (typeof ids=='string') {ids=[ids]}
   var l=ids.length; ids.forEach((n,i) => cc(n,hu(d-(i/l*1530))))}
 
-function b(x){document.body.style.background="#000 url('bg/"+x.toString().padStart(2,'0')+".webp') center / cover no-repeat"}
-function ri(x){return Math.trunc(Math.random()*x)+1}
-function rb(x){if(d.bx){return}
-  d.bl=d.bc; while(d.bc==d.bl){d.bc=ri(x)}
-  d.bs.add(d.bc); b(d.bc)}
-function rp(x){rb(x)}
+function b(n){document.body.style.background="#000 url('bg/"+n.toString().padStart(2,'0')+".webp') center / cover no-repeat"}
+function ri(n){return Math.trunc(Math.random()*n)+1}
+function rb(n){if(d.bx){return} d.bl=d.bc;
+  var bm = d.db.slice(0,x(n)?n:d.db.length).map((i)=>new Array(i[1]).fill(i[0])).flat().filter((j)=>j!=d.bl);
+  d.bc=bm[ri(bm.length)-1]; d.bs.add(d.bc); b(d.bc)}
 
-function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0),d.vs);requestAnimationFrame(m)}
+function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0),d.sv);requestAnimationFrame(m)}
 
 function rs() {
   var w = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
@@ -37,10 +36,11 @@ function rs() {
 var d = {
   pw:700,ph:800,
   ms:1,mf:0,m0:new Date().getTime(),
-  ts:['ta','tb','tc','td'],vs:['pp','va','vb','vc','vd'],
-  ba:6,bb:18,bc:0,bl:0,bs:new Set(),bx:false}
+  db:[[1,9],[2,9],[3,9],[4,9],[5,9],[6,7],[7,6],[8,3],[9,6],[10,2],[11,3],[12,4],[13,5],[14,1],[15,2],[16,1],[17,2],[18,8]],
+  st:['ta','tb','tc','td'],sv:['pp','va','vb','vc','vd'],
+  ba:6,bc:0,bl:0,bs:new Set(),bx:false}
 
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
-if(ui('h').startsWith('404')) {d.vs.splice(3,2)} else {rb(d.ba)}
+if(ui('h').startsWith('404')) {d.sv.splice(3,2)} else {rb(d.ba)}
 rs();k('l');m();
