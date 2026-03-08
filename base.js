@@ -2,7 +2,7 @@ function e(i){return document.getElementById(i)}
 function x(v){return typeof(v)!='undefined'}
 function k(i){e(i).style.display='none'}
 function s(i){e(i).style.display='block'}
-function sk(i,a){if(!e(a)){a=['ta','tb','tc','td']}a.forEach(x=>k(x));s(i)}
+function sk(i,a){if(!e(a)){a=d.ts}a.forEach(x=>k(x));s(i)}
 function ph(i){e(i).style.display=='none'?s(i):k(i)}
 
 function cc(i,x){var n = e(i);
@@ -27,16 +27,19 @@ function rb(x){
   d.bl=d.bc; while(d.bc==d.bl){d.bc=ri(x)}
   d.bs.add(d.bc); b(d.bc)}
 
-function main() {uh(new Date(),['pp','m4a','m4b','m4c','m4d'],137);requestAnimationFrame(main)}
+function main() {uh(new Date(),d.vs,137);requestAnimationFrame(main)}
 
 function rs() {
   var w = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
   var h = (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
   document.body.style.zoom = Math.min(w/d.pw,h/d.ph)}
 
-var d = {pw:700,ph:800,ba:6,bb:18,bc:0,bl:0,bs:new Set()}
+var d = {
+  pw:700,ph:800,
+  ts:['ta','tb','tc','td'],vs:['pp','va','vb','vc','vd'],
+  ba:6,bb:18,bc:0,bl:0,bs:new Set()}
 
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
+if(ui('h').startsWith('404')) {d.vs.splice(3,2)} else {rb(d.ba)}
 rs();k('l');main();
-if(!ui('h').startsWith('404')){rb(d.ba)}
