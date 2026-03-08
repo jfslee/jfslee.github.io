@@ -29,16 +29,17 @@ function b(n){
     document.body.appendChild(ib);
     window.getComputedStyle(ib).opacity;
     ib.style.opacity='1';
-    setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});d.bx=false},1000)}
+    setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});ub();d.bx=false},1000)}
   im.src=iu}
 
+function ub(){ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc)}
 function ri(n){return Math.trunc(Math.random()*n)+1}
 function rb(n){if(d.bx){return} d.bl=d.bc;
   var bm = Object.entries(db).map(e=>[e[0],e[1].pr])
     .slice(0,x(n)?n:Object.entries(db).length)
     .map((i)=>new Array(i[1]).fill(i[0])).flat().filter((j)=>j!=d.bl);
   d.bc=bm[ri(bm.length)-1]; d.bs.add(d.bc);
-  ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc);
+  if(d.bl==0){ub()}
   b(d.bc)}
 
 function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0),d.sv);requestAnimationFrame(m)}
