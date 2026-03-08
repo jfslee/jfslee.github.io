@@ -23,8 +23,12 @@ function uh(d,ids){
 function b(n){document.body.style.background="#000 url('bg/"+n.toString().padStart(2,'0')+".webp') center / cover no-repeat"}
 function ri(n){return Math.trunc(Math.random()*n)+1}
 function rb(n){if(d.bx){return} d.bl=d.bc;
-  var bm = d.db.slice(0,x(n)?n:d.db.length).map((i)=>new Array(i[1]).fill(i[0])).flat().filter((j)=>j!=d.bl);
-  d.bc=bm[ri(bm.length)-1]; d.bs.add(d.bc); b(d.bc)}
+  var bm = Object.entries(db).map(e=>[e[0],e[1].pr])
+    .slice(0,x(n)?n:Object.entries(db).length)
+    .map((i)=>new Array(i[1]).fill(i[0])).flat().filter((j)=>j!=d.bl);
+  d.bc=bm[ri(bm.length)-1]; d.bs.add(d.bc);
+  ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc);
+  b(d.bc)}
 
 function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0),d.sv);requestAnimationFrame(m)}
 
@@ -36,9 +40,8 @@ function rs() {
 var d = {
   pw:700,ph:800,
   ms:1,mf:0,m0:new Date().getTime(),
-  db:[[1,9],[2,9],[3,9],[4,9],[5,9],[6,7],[7,6],[8,3],[9,6],[10,2],[11,3],[12,4],[13,5],[14,1],[15,2],[16,1],[17,2],[18,8]],
   st:['ta','tb','tc','td'],sv:['pp','va','vb','vc','vd'],
-  ba:6,bc:0,bl:0,bs:new Set(),bx:false}
+  ba:5,bc:0,bl:0,bs:new Set(),bx:false}
 
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
