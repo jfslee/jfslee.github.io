@@ -50,7 +50,7 @@ function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
 function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),d.sv);
   if(d.t>d.bnt && !d.ep && !d.bx) {rb(0)}
   if(!d.bx){var n=(d.bnt-d.t)/1000;
-    ui('lm',"Next photo in "+n.toFixed(2)+"s");
+    ui('lm',"Next photo in "+n.toFixed(1)+"s");
     ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}
   requestAnimationFrame(m)}
 
