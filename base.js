@@ -23,7 +23,7 @@ function ub(){ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc)}
 
 function b(n){
   d.bx = true; var im = new Image();
-  ui('lm',"Loading next photo...")
+  ui('lm',"Loading next photo...");
   var iu = "bg/"+n.toString().padStart(2,'0')+".webp";
   im.onload = function(){
     var ib = document.createElement('div');ib.className='bg';
