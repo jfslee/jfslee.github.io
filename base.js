@@ -22,7 +22,8 @@ function uh(d,ids){
 function ub(){ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc)}
 
 function b(n){
-  d.bx = true; var im = new Image(); 
+  d.bx = true; var im = new Image();
+  ui('lm',"Loading next photo...")
   var iu = "bg/"+n.toString().padStart(2,'0')+".webp";
   im.onload = function(){
     var ib = document.createElement('div');ib.className='bg';
@@ -31,7 +32,7 @@ function b(n){
     window.getComputedStyle(ib).opacity;
     ib.style.opacity='1';
     setTimeout(()=>{ub()},500);
-    setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});d.bx=false},1000)}
+    setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});ds();d.bx=false},1000)}
   im.src=iu}
 
 function dm(){return Object.entries(db).map(e=>[e[0],e[1].pr])}
@@ -46,7 +47,12 @@ function rb(n){if(d.bx){return} d.bl=d.bc;
 
 function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
 
-function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),d.sv);requestAnimationFrame(m)}
+function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),d.sv);
+  if(d.t>d.bnt && !d.ep && !d.bx) {rb(0)}
+  if(!d.bx){var n=(d.bnt-d.t)/1000;
+    ui('lm',"Next photo in "+n.toFixed(2)+"s");
+    ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}
+  requestAnimationFrame(m)}
 
 function rs() {
   var w = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
@@ -58,7 +64,7 @@ var d = {
   ms:1,mf:0,m0:new Date().getTime(),
   st:['ta','tb','tc','td'],sv:['pp','va','vb','vc','vd'],
   ba:5,bc:0,bl:0,bs:new Set(),bx:false,
-  bnt:0,bnd:20000,bnv:10000,
+  bnt:0,bnd:30000,bnv:30000,
   get t() {return new Date().getTime()},
   get ep(){return ui('h').startsWith('404')}}
 
