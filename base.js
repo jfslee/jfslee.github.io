@@ -48,10 +48,11 @@ function rb(n){if(d.bx){return} d.bl=d.bc;
 function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
 
 function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),d.sv);
-  if(d.t>d.bnt && !d.ep && !d.bx) {rb(0)}
-  if(!d.bx){var n=(d.bnt-d.t)/1000;
-    ui('lm',"Next photo in "+n.toFixed(1)+"s");
-    ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}
+  if(!d.ep) {
+    if(!d.bx) {
+      ui('lm',"Next photo in "+((d.bnt-d.t)/1000).toFixed(1)+"s");
+      ui('ln',"Seen "+d.bs.size+" out of "+dm().length);
+      if(d.t>d.bnt){rb(0)}}}
   requestAnimationFrame(m)}
 
 function rs() {
@@ -68,7 +69,8 @@ var d = {
   get t() {return new Date().getTime()},
   get ep(){return ui('h').startsWith('404')}}
 
-ui('year',new Date().getFullYear());
-ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
-if(d.ep) {d.sv.splice(3,2)} else {rb(d.ba);ds()}
+if(d.ep) {d.sv.splice(3,2)} else {
+  ui('year',new Date().getFullYear());
+  ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
+  rb(d.ba);ds()}
 rs();m();
