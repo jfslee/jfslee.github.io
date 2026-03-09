@@ -3,7 +3,7 @@ function x(v){return typeof(v)!='undefined'}
 function k(i){e(i).style.display='none'}
 function s(i){e(i).style.display='block'}
 function sk(i,a){if(!e(a)){a=d.st}a.forEach(x=>k(x));s(i)}
-function ph(i){e(i).style.display=='none'?s(i):k(i)}
+function ph(i){e(i).style.opacity=(e(i).style.opacity==1?0:1)}
 
 function cc(i,x){var n = e(i);
   if (n.nodeName == 'svg') {n.style.stroke=x}
@@ -71,4 +71,4 @@ var d = {
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
 if(d.ep) {d.sv.splice(3,2)} else {rb(d.ba);ds()}
-rs();k('l');m();
+rs();m();

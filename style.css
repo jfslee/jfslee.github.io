@@ -9,7 +9,7 @@ td svg {height:64px}
 h1 {font-size:64px;font-weight:144}
 a {color:#ccc;text-decoration:none;font-weight:420}
 a:hover {color:#fff}
-#l {font-size:14px;font-feature-settings:"tnum";font-variation-settings:"opsz"30}
+#l {font-size:14px;font-feature-settings:"tnum";font-variation-settings:"opsz"30;opacity:0;transition:opacity 0.2s ease-in-out}
 #fn {font-weight:567}
 #ta,#tb,#tc,#td {display:none}
 #footer {position:fixed;top:85%;right:0;left:0;font-size:18px}
