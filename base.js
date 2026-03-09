@@ -44,7 +44,9 @@ function rb(n){if(d.bx){return} d.bl=d.bc;
   d.bc=bm[ri(bm.length)-1]; d.bs.add(d.bc);
   if(d.bl==0){ub()} b(d.bc)}
 
-function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0),d.sv);requestAnimationFrame(m)}
+function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
+
+function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),d.sv);requestAnimationFrame(m)}
 
 function rs() {
   var w = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
@@ -55,9 +57,12 @@ var d = {
   pw:700,ph:800,
   ms:1,mf:0,m0:new Date().getTime(),
   st:['ta','tb','tc','td'],sv:['pp','va','vb','vc','vd'],
-  ba:5,bc:0,bl:0,bs:new Set(),bx:false}
+  ba:5,bc:0,bl:0,bs:new Set(),bx:false,
+  bnt:0,bnd:20000,bnv:10000,
+  get t() {return new Date().getTime()},
+  get ep(){return ui('h').startsWith('404')}}
 
 ui('year',new Date().getFullYear());
 ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
-if(ui('h').startsWith('404')) {d.sv.splice(3,2)} else {rb(d.ba)}
+if(d.ep) {d.sv.splice(3,2)} else {rb(d.ba);ds()}
 rs();k('l');m();
