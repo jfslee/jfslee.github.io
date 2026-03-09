@@ -3,7 +3,7 @@ function x(v){return typeof(v)!='undefined'}
 function k(i){e(i).style.display='none'}
 function s(i){e(i).style.display='block'}
 function sk(i,a){if(!e(a)){a=d.st}a.forEach(x=>k(x));s(i)}
-function ph(i){e(i).style.opacity=(e(i).style.opacity==1?0:1)}
+function ph(i){d.fr=false;e(i).style.opacity=(e(i).style.opacity==1?0:1)}
 
 function cc(i,x){var n = e(i);
   if (n.nodeName == 'svg') {n.style.stroke=x}
@@ -31,7 +31,8 @@ function b(n){
     document.body.appendChild(ib);
     window.getComputedStyle(ib).opacity;
     ib.style.opacity='1';
-    setTimeout(()=>{ub()},500);
+    setTimeout(()=>{ub();d.bn++},500);
+    if(d.bn==1){setTimeout(()=>{if(d.fr){ph('l')}},5000)}
     setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});ds();d.bx=false},1000)}
   im.src=iu}
 
@@ -61,10 +62,10 @@ function rs() {
   document.body.style.zoom = Math.min(w/d.pw,h/d.ph)}
 
 var d = {
-  pw:700,ph:800,
+  pw:700,ph:800,fr:true,
   ms:1,mf:0,m0:new Date().getTime(),
   st:['ta','tb','tc','td'],sv:['pp','va','vb','vc','vd'],
-  ba:5,bc:0,bl:0,bs:new Set(),bx:false,
+  ba:5,bc:0,bl:0,bn:0,bs:new Set(),bx:false,
   bnt:0,bnd:30000,bnv:30000,
   get t() {return new Date().getTime()},
   get ep(){return ui('h').startsWith('404')}}
