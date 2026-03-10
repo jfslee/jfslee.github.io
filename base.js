@@ -44,7 +44,7 @@ function b(n){
   im.src=iu}
 
 function dm(){return Object.entries(db).map(e=>[Number(e[0]),e[1].pr])}
-function df(){return dm().filter(f=>f[0]!=d.bl)}
+function df(){return dm().filter(f=>f[0]!=d.bc)}
 function ax(a){return a.map((i)=>new Array(i[1]).fill(i[0])).flat()}
 function ri(n){return Math.trunc(Math.random()*n)+1}
 function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
