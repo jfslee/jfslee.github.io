@@ -16,10 +16,13 @@ function hc(h){return new Array(3).fill().map((x,i)=>sh(ch(h+(510*i))))}
 function hu(h){return "rgb("+hc(h).join(",")+")"}
 
 function ui(i,v,a){return x(v)?x(a)?e(i).setAttribute(a,v):e(i).innerHTML=v:e(i).innerText}
+
 function uh(d,ids){
   if (typeof ids=='string') {ids=[ids]}
   var l=ids.length; ids.forEach((n,i) => cc(n,hu(d-(i/l*1530))))}
-function ub(){d.bn++;
+  
+function ub(){
+  if(d.bn==0){e('pi').style.opacity=1} d.bn++;
   ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc);
   ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}
 
@@ -43,13 +46,12 @@ function b(n){
 function dm(){return Object.entries(db).map(e=>[Number(e[0]),e[1].pr])}
 function df(){return dm().filter(f=>f[0]!=d.bl)}
 function ax(a){return a.map((i)=>new Array(i[1]).fill(i[0])).flat()}
-
 function ri(n){return Math.trunc(Math.random()*n)+1}
+function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
+
 function rb(n){if(d.bx){return}
   var bm = ax(x(n)?n>0?df().slice(0,n):d.bs.size<dm().length?df().filter(f=>!d.bs.has(f[0])):df():df());
   b(bm[ri(bm.length)-1])}
-
-function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
 
 function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),d.sv);
   if(!d.ep) {
