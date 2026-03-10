@@ -19,10 +19,14 @@ function ui(i,v,a){return x(v)?x(a)?e(i).setAttribute(a,v):e(i).innerHTML=v:e(i)
 function uh(d,ids){
   if (typeof ids=='string') {ids=[ids]}
   var l=ids.length; ids.forEach((n,i) => cc(n,hu(d-(i/l*1530))))}
-function ub(){ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc)}
+function ub(){d.bn++;
+  ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc);
+  ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}
 
 function b(n){
-  d.bx = true; var im = new Image();
+  if(d.bx){return} d.bx=true;
+  d.bl=d.bc; d.bc=n; d.bs.add(d.bc);
+  var im = new Image();
   ui('lm',"Loading next photo...");
   var iu = "bg/"+n.toString().padStart(2,'0')+".webp";
   im.onload = function(){
@@ -31,20 +35,19 @@ function b(n){
     document.body.appendChild(ib);
     window.getComputedStyle(ib).opacity;
     ib.style.opacity='1';
-    setTimeout(()=>{ub();d.bn++},500);
+    if(d.bl==0){ub()} else {setTimeout(()=>{ub()},500)}
     if(d.bn==1){setTimeout(()=>{if(d.fr){ph('l')}},5000)}
     setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});ds();d.bx=false},1000)}
   im.src=iu}
 
-function dm(){return Object.entries(db).map(e=>[e[0],e[1].pr])}
+function dm(){return Object.entries(db).map(e=>[Number(e[0]),e[1].pr])}
 function df(){return dm().filter(f=>f[0]!=d.bl)}
 function ax(a){return a.map((i)=>new Array(i[1]).fill(i[0])).flat()}
 
 function ri(n){return Math.trunc(Math.random()*n)+1}
-function rb(n){if(d.bx){return} d.bl=d.bc;
+function rb(n){if(d.bx){return}
   var bm = ax(x(n)?n>0?df().slice(0,n):d.bs.size<dm().length?df().filter(f=>!d.bs.has(f[0])):df():df());
-  d.bc=bm[ri(bm.length)-1]; d.bs.add(d.bc);
-  if(d.bl==0){ub()} b(d.bc)}
+  b(bm[ri(bm.length)-1])}
 
 function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
 
@@ -52,7 +55,6 @@ function m() {d.mf+=d.ms;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),d.sv);
   if(!d.ep) {
     if(!d.bx) {
       ui('lm',"Next photo in "+((d.bnt-d.t)/1000).toFixed(1)+"s");
-      ui('ln',"Seen "+d.bs.size+" out of "+dm().length);
       if(d.t>d.bnt){rb(0)}}}
   requestAnimationFrame(m)}
 
