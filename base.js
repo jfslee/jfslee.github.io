@@ -22,7 +22,7 @@ function uh(d,ids){
   var l=ids.length; ids.forEach((n,i) => cc(n,hu(d-(i/l*1530))))}
   
 function ub(){
-  if(d.bn==0){e('pi').style.opacity=1} d.bn++;
+  e('pi').style.opacity=1; d.bn++;
   ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc);
   ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}
 
@@ -37,8 +37,8 @@ function b(n){
     ib.style.background="#000 url('"+iu+"') center / cover no-repeat";
     document.body.appendChild(ib);
     window.getComputedStyle(ib).opacity;
-    ib.style.opacity='1';
-    if(d.bl==0){ub()} else {setTimeout(()=>{ub()},500)}
+    ib.style.opacity=1; e('pi').style.opacity=0;
+    setTimeout(()=>{ub()},500);
     if(d.bn==1){setTimeout(()=>{if(d.fr){ph('l')}},5000)}
     setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});ds();d.bx=false},1000)}
   im.src=iu}
