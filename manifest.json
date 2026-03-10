@@ -1,0 +1,13 @@
+{
+  "name": "joshl.ee",
+  "short_name": "joshl.ee",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000",
+  "description": "Joshua Lee | photographer, data dreamer & insights educator",
+  "icons": [{
+    "src": "/favicon.svg",
+    "sizes": "any",
+    "type": "image/svg+xml",
+    "purpose": "maskable"}]
+}
