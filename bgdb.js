@@ -13,7 +13,7 @@ db={
   pr:10},
 4:{
   name:"ancestral",
-  loc:"Ipoh, Malaysia",
+  loc:"Sungai Pinji, Perak, Malaysia",
   pr:9},
 5:{
   name:"fade",
@@ -82,5 +82,9 @@ db={
 21:{
   name:"society",
   loc:"International Towers Barangaroo",
+  pr:3},
+22:{
+  name:"paper",
+  loc:"Ipoh Old Town, Malaysia",
   pr:2}
 }
