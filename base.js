@@ -1,8 +1,8 @@
 function e(i){return document.getElementById(i)}
 function x(v){return typeof(v)!='undefined'}
-function k(i){e(i).style.display='none'}
-function s(i){e(i).style.display='block'}
-function sk(i,a){if(!e(a)){a=d.st}a.forEach(x=>k(x));s(i)}
+function k(i){e(i).style.opacity=0;e(i).style.zIndex=-1}
+function s(i){e(i).style.opacity=1;e(i).style.zIndex=0;}
+function sk(i){d.st.filter(j=>j!=i).forEach(x=>k(x));s(i)}
 function ph(i){d.fr=false;e(i).style.opacity=(e(i).style.opacity==1?0:1)}
 
 function cc(i,x){var n = e(i);
