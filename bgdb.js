@@ -66,7 +66,7 @@ db={
 17:{
   name:"meeting",
   loc:"Nightcliff, Darwin, NT",
-  pr:2},
+  pr:1},
 18:{
   name:"sunday",
   loc:"Bronte Beach, Sydney",
@@ -74,7 +74,7 @@ db={
 19:{
   name:"molten",
   loc:"The Star, Brisbane",
-  pr:1},
+  pr:2},
 20:{
   name:"weaver",
   loc:"George Brown Botanic Gardens",
@@ -82,9 +82,17 @@ db={
 21:{
   name:"society",
   loc:"International Towers Barangaroo",
-  pr:3},
+  pr:4},
 22:{
   name:"paper",
   loc:"Ipoh Old Town, Malaysia",
-  pr:2}
+  pr:2},
+23:{
+  name:"assured",
+  loc:"Australian National Maritime Museum",
+  pr:2},
+24:{
+  name:"catch",
+  loc:"Territory Wildlife Park",
+  pr:2},
 }
