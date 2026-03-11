@@ -9,10 +9,11 @@ td svg {height:64px}
 h1 {font-size:64px;font-weight:144}
 a {pointer-events:auto;color:#ccc;text-decoration:none;font-weight:420}
 a:hover {color:#fff}
-#l {font-size:14px;font-feature-settings:"tnum";font-variation-settings:"opsz"30;opacity:0;transition:opacity 0.25s}
-#c,#pi {opacity:0;transition:opacity 0.5s}
+#l {font-size:14px;font-feature-settings:"tnum";font-variation-settings:"opsz"30;opacity:0}
+#c,#pi {opacity:0;transition:opacity 0.5s,display 0.5s allow-discrete}
 #fn {font-weight:567}
-#ta,#tb,#tc,#td {position:absolute;left:0;right:0;opacity:0;transition:opacity 0.25s}
+#ta,#tb,#tc,#td,#l {opacity:0;transition:opacity 0.25s,display 0.25s allow-discrete}
+#ta,#tb,#tc,#td {position:absolute;left:0;right:0}
 #footer {position:fixed;top:85%;right:0;left:0;font-size:18px}
 div.bg,#n {position:fixed;top:0;left:0;width:100%;height:100%}
 #n {pointer-events:auto;z-index:-1}

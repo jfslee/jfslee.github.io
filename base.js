@@ -1,14 +1,13 @@
 function e(i){return document.getElementById(i)}
 function es(i){return e(i).style}
 function x(v){return typeof(v)!='undefined'}
-function k(i){es(i).opacity=0;es(i).zIndex=-1}
-function s(i){es(i).opacity=1;es(i).zIndex=0}
+function k(i){es(i).opacity=0;es(i).display='none'}
+function s(i){es(i).opacity=1;es(i).display='block'}
 function sk(i){d.st.filter(j=>j!=i).forEach(x=>k(x));s(i)}
-function ph(i){d.fr=false;es(i).opacity=(es(i).opacity==1?0:1)}
+function ph(i){if(i=='l'){d.fr=false} if(es(i).opacity==1){k(i)}else{s(i)}}
 
-function pc(){
-  if (es('pp').height=='50px') {es('pp').height='100px';es('c').opacity=1}
-  else {es('pp').height='50px';es('c').opacity=0}}
+function pc(){ph('c'); var p=es('pp');
+  if (p.height=='50px') {p.height='100px'} else {p.height='50px'}}
 
 function cc(i,x){var n = e(i);
   if (n.nodeName == 'svg') {n.style.stroke=x}
@@ -44,7 +43,7 @@ function b(n){
     window.getComputedStyle(ib).opacity;
     ib.style.opacity=1; es('pi').opacity=0;
     setTimeout(()=>{ub()},500);
-    if(d.bn==1){setTimeout(()=>{if(d.fr){ph('l')}},5000)}
+    if(d.bn==1){setTimeout(()=>{if(d.fr){ph('l')}},1250)}
     setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});ds();d.bx=false},1000)}
   im.src=iu}
 
