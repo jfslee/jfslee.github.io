@@ -1,15 +1,15 @@
 db={
 1:{
   name:"flame",
-  loc:"East Point, Darwin, NT",
+  loc:"East Point, Darwin",
   pr:12},
 2:{
   name:"daybreak",
-  loc:"Neagles Rock, Clare Valley, SA",
+  loc:"Neagles Rock, Clare Valley",
   pr:9},
 3:{
   name:"buildup",
-  loc:"Casuarina Beach, Darwin, NT",
+  loc:"Casuarina Beach, Darwin",
   pr:10},
 4:{
   name:"ancestral",
@@ -17,11 +17,11 @@ db={
   pr:9},
 5:{
   name:"fade",
-  loc:"Dripstone Cliffs, Darwin, NT",
+  loc:"Dripstone Cliffs, Darwin",
   pr:11},
 6:{
   name:"wander",
-  loc:"Buffalo Creek Reserve, NSW",
+  loc:"Buffalo Creek Reserve, Sydney",
   pr:7},
 7:{
   name:"breeze",
@@ -45,7 +45,7 @@ db={
   pr:1},
 12:{
   name:"endless",
-  loc:"Barkly Tablelands, NT",
+  loc:"Barkly Tablelands, outback NT",
   pr:4},
 13:{
   name:"commodity",
@@ -53,19 +53,19 @@ db={
   pr:5},
 14:{
   name:"influence",
-  loc:"Bundilla Beach, Darwin, NT",
-  pr:2},
+  loc:"Bundilla Beach, Darwin",
+  pr:3},
 15:{
   name:"attractor",
   loc:"Dorrigo National Park",
-  pr:3},
+  pr:2},
 16:{
   name:"stand",
   loc:"Sydney Town Hall",
   pr:1},
 17:{
   name:"meeting",
-  loc:"Nightcliff, Darwin, NT",
+  loc:"Nightcliff, Darwin",
   pr:1},
 18:{
   name:"sunday",
@@ -86,13 +86,29 @@ db={
 22:{
   name:"paper",
   loc:"Ipoh Old Town, Malaysia",
-  pr:2},
+  pr:3},
 23:{
   name:"assured",
   loc:"Australian National Maritime Museum",
   pr:2},
 24:{
-  name:"catch",
-  loc:"Territory Wildlife Park",
+  name:"snack",
+  loc:"Territory Wildlife Park, Darwin",
   pr:2},
+25:{
+  name:"fetch",
+  loc:"Gallows Beach, Coffs Harbour",
+  pr:1},
+26:{
+  name:"artery",
+  loc:"Main North Road, SA",
+  pr:1},
+27:{
+  name:"auspicious",
+  loc:"Queen Victoria Building",
+  pr:1},
+28:{
+  name:"shell",
+  loc:"Tumbalong Park, Darling Harbour",
+  pr:1}
 }

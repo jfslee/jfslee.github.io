@@ -81,6 +81,6 @@ var d = {
 if(d.ep) {d.sv.splice(3,2)} else {
   ui('year',new Date().getFullYear());
   ui('em',"mailto:"+['me',ui('h')].join('@'),'href');
-  es('n').opacity=0;es('c').opacity=1;
+  es('n').opacity=0;es('c').opacity=1;sk('h');
   rb(d.ba);ds()}
 rs();m();
