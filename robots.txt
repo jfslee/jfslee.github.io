@@ -1,3 +1,6 @@
 User-agent: *
-Content-Signal: ai-train=no, search=no, ai-input=no
-Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
+
+User-agent: *
+Disallow: /bg/
