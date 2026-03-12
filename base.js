@@ -51,7 +51,7 @@ function dm(){return Object.entries(db).map(e=>[Number(e[0]),e[1].pr])}
 function df(){return dm().filter(f=>f[0]!=d.bc)}
 function ax(a){return a.map((i)=>new Array(i[1]).fill(i[0])).flat()}
 function ri(n){return Math.trunc(Math.random()*n)+1}
-function ds(){d.bnt=d.t+d.bnd+ri(d.bnv)}
+function ds(){d.bnt=d.t+c.bnd+ri(c.bnv+d.mf)}
 
 function rb(n){if(d.bx){return}
   var bm = ax(x(n)?n>0?df().slice(0,n):d.bs.size<dm().length?df().filter(f=>!d.bs.has(f[0])):df():df());
@@ -75,7 +75,7 @@ var d = {
   get t() {return new Date().getTime()},
   get ep(){return ui('h').startsWith('404')}}
 
-var c = Object.freeze({pw:700,ph:800,bnd:30000,bnv:30000,st:['ta','tb','tc','td'],sv:['pp','va','vb','vc','vd'],i:{
+var c = Object.freeze({pw:700,ph:800,bnd:30000,bnv:10000,st:['ta','tb','tc','td'],sv:['pp','va','vb','vc','vd'],i:{
   pp:'<path d="M0-4V4H-2A2 2 0 0 1-2 0H2A2 2 0 0 0 2-4H0Z"/><circle cx="6" cy="-2" r="2"/><circle cx="-6" cy="2" r="2"/>',
   va:'<svg viewBox="0 0 24 24"><path d="M12 2C13.1 2 14 2.9 14 4S13.1 6 12 6 10 5.1 10 4 10.9 2 12 2M15.9 8.1C15.5 7.7 14.8 7 13.5 7H11C8.2 7 6 4.8 6 2H4C4 5.2 6.1 7.8 9 8.7V22H11V16H13V22H15V10.1L19 14L20.4 12.6L15.9 8.1Z"/></svg>',
   vb:'<svg viewBox="0 0 24 24"><path d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"/></svg>',
