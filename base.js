@@ -7,7 +7,7 @@ function sk(i){c.st.filter(j=>j!=i).forEach(x=>k(x));s(i)}
 function ph(i){if(i=='l'){d.fr=false} if(es(i).opacity==1){k(i)}else{s(i)}}
 
 function pc(){ph('c'); var p=es('pp');
-  if (p.height=='50px') {p.height='100px'} else {p.height='50px'}}
+  if (p.height=='50px') {d.mh=false;p.height='100px'} else {d.mh=true;p.height='50px'}}
 
 function cc(i,x){var n = e(i);
   if (n.nodeName == 'svg') {n.style.stroke=x}
@@ -57,11 +57,10 @@ function rb(n){if(d.bx){return}
   var bm = ax(x(n)?n>0?df().slice(0,n):d.bs.size<dm().length?df().filter(f=>!d.bs.has(f[0])):df():df());
   b(bm[ri(bm.length)-1])}
 
-function m() {d.mf++;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),c.sv);
-  if(!d.ep) {
-    if(!d.bx) {
-      ui('lm',"Next photo in "+((d.bnt-d.t)/1000).toFixed(1)+"s");
-      if(d.t>d.bnt){rb(0)}}}
+function m() {d.mf++;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),(d.mh?c.sv.slice(0,1):c.sv));
+  if(!(d.ep||d.bx)) {
+    ui('lm',"Next photo in "+((d.bnt-d.t)/1000).toFixed(1)+"s");
+    if(d.t>d.bnt){rb(0)}}
   requestAnimationFrame(m)}
 
 function rs() {
@@ -70,7 +69,8 @@ function rs() {
   document.body.style.zoom = Math.min(w/c.pw,h/c.ph)}
 
 var d = {
-  fr:true,mf:0,m0:new Date().getTime(),
+  fr:true,mh:false,
+  mf:0,m0:new Date().getTime(),
   ba:5,bc:0,bl:0,bn:0,bs:new Set(),bx:false,bnt:0,
   get t() {return new Date().getTime()},
   get ep(){return ui('h').startsWith('404')}}
