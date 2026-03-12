@@ -14,7 +14,7 @@ db={
 4:{
   name:"ancestral",
   loc:"Sungai Pinji, Perak, Malaysia",
-  pr:9},
+  pr:7},
 5:{
   name:"fade",
   loc:"Dripstone Cliffs, Darwin",
@@ -22,7 +22,7 @@ db={
 6:{
   name:"wander",
   loc:"Buffalo Creek Reserve, Sydney",
-  pr:7},
+  pr:6},
 7:{
   name:"breeze",
   loc:"Market Street, Sydney",
@@ -70,7 +70,7 @@ db={
 18:{
   name:"sunday",
   loc:"Bronte Beach, Sydney",
-  pr:7},
+  pr:6},
 19:{
   name:"molten",
   loc:"The Star, Brisbane",
@@ -110,5 +110,13 @@ db={
 28:{
   name:"shell",
   loc:"Tumbalong Park, Darling Harbour",
-  pr:1}
+  pr:1},
+29:{
+  name:"nice",
+  loc:"Tattersalls Lane, Melbourne",
+  pr:1},
+30:{
+  name:"stopover",
+  loc:"Renner Springs, outback NT",
+  pr:2}
 }
