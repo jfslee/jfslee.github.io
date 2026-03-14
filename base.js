@@ -34,7 +34,7 @@ function b(n){
   if(d.bx){return} d.bx=true;
   d.bl=d.bc; d.bc=n; d.bs.add(d.bc);
   var im = new Image();
-  ui('lm',"Loading next photo...");
+  ui('lm',d.bu?"<a onclick='d.bu=false'>Click to start slideshow</a>":"Loading next photo...");
   var iu = "bg/"+n.toString().padStart(2,'0')+".webp";
   im.onload = function(){
     var ib = document.createElement('div');ib.className='bg';
@@ -44,7 +44,9 @@ function b(n){
     ib.style.opacity=1; es('pi').opacity=0;
     setTimeout(()=>{ub()},500);
     if(d.bn==1){setTimeout(()=>{if(d.fr){ph('l')}},1250)}
-    setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});ds();d.bx=false},1000)}
+    setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});
+      if(d.bu){pc()} else {ds()}
+      d.bx=false},1000)}
   im.src=iu}
 
 function dm(){return Object.entries(db).map(e=>[Number(e[0]),e[1].pr])}
@@ -58,7 +60,7 @@ function rb(n){if(d.bx){return}
   b(bm[ri(bm.length)-1])}
 
 function m() {d.mf++;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),(d.mh?c.sv.slice(0,1):c.sv));
-  if(!(d.ep||d.bx)) {
+  if(!(d.ep||d.bx||d.bu)) {
     ui('lm',"Next photo in "+((d.bnt-d.t)/1000).toFixed(1)+"s");
     if(d.t>d.bnt){rb(0)}}
   requestAnimationFrame(m)}
@@ -72,6 +74,7 @@ var d = {
   fr:true,mh:false,
   mf:0,m0:new Date().getTime(),
   ba:5,bc:0,bl:0,bn:0,bs:new Set(),bx:false,bnt:0,
+  bu:Number(new URLSearchParams(window.location.search).get('bg')),
   get t() {return new Date().getTime()},
   get ep(){return ui('h').startsWith('404')}}
 
@@ -90,5 +93,5 @@ if(d.ep) {c.sv.splice(3,2);ui('pp',c.i.pp)} else {
   c.re.forEach(i=>c.rp.forEach(j=>ui(i,e(i).innerHTML.replaceAll(j[0],j[1]))));
   c.sv.forEach(j=>ui(j,c.i[j]));
   es('n').opacity=0;es('c').opacity=1;sk('h');
-  rb(d.ba);ds()}
+  if(d.bu>0 && d.bu<=dm().length){b(d.bu);d.bu=true} else {rb(d.ba);d.bu=false}}
 rs();m();
