@@ -34,7 +34,7 @@ function b(n){
   if(d.bx){return} d.bx=true;
   d.bl=d.bc; d.bc=n; d.bs.add(d.bc);
   var im = new Image();
-  ui('lm',d.bu?"<a onclick='d.bu=false'>Click to start slideshow</a>":"Loading next photo...");
+  ui('lm',d.bu?"<a onclick='d.bu=false'>Show more photos</a>":"Loading next photo...");
   var iu = "bg/"+n.toString().padStart(2,'0')+".webp";
   im.onload = function(){
     var ib = document.createElement('div');ib.className='bg';
@@ -55,7 +55,7 @@ function ax(a){return a.map((i)=>new Array(i[1]).fill(i[0])).flat()}
 function ri(n){return Math.trunc(Math.random()*n)+1}
 function ds(){d.bnt=d.t+c.bnd+ri(c.bnv+d.mf)}
 
-function rb(n){if(d.bx){return}
+function rb(n){if(d.bx||d.bu){return}
   var bm = ax(x(n)?n>0?df().slice(0,n):d.bs.size<dm().length?df().filter(f=>!d.bs.has(f[0])):df():df());
   b(bm[ri(bm.length)-1])}
 
