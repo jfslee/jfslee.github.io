@@ -28,5 +28,7 @@ db=
 ,27:{name:"auspicious",loc:"Queen Victoria Building",pr:1}
 ,28:{name:"shell",loc:"Tumbalong Park, Darling Harbour",pr:1}
 ,29:{name:"nice",loc:"Tattersalls Lane, Melbourne",pr:1}
-,30:{name:"stopover",loc:"Renner Springs, outback NT",pr:2}
+,30:{name:"reach",loc:"Renner Springs, outback NT",pr:2}
+,31:{name:"solitary",loc:"Muttonbird Island Nature Reserve",pr:1}
+,32:{name:"energy",loc:"Mount Walker Lookout, Hughenden",pr:1}
 }
