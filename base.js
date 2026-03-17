@@ -38,7 +38,7 @@ function b(n){
   ui('lm',d.bu?"<a onclick='d.bu=false'>Show more photos</a>":"Loading next photo...");
   var iu = "bg/"+n.toString().padStart(2,'0')+".webp";
   im.onload = function(){
-    var ib = document.createElement('div');ib.className='bg';
+    var ib = document.createElement('div');ib.classList.add('bg');
     ib.style.background="#000 url('"+iu+"') center / cover no-repeat";
     document.body.appendChild(ib);
     window.getComputedStyle(ib).opacity;
