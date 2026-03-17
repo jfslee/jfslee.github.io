@@ -20,4 +20,5 @@ div.s {font-size:16px;font-variation-settings:"opsz"8}
 #footer {font-size:18px;position:fixed;top:85%;left:0;right:0}
 #n {pointer-events:auto;z-index:-1}
 div.bg,#n {position:fixed;top:0;left:0;width:100%;height:100%}
-div.bg {opacity:0;z-index:-2;transition:opacity 1s ease-in-out}
+@keyframes z1 {from {transform:scale(1.05)} to {transform:scale(1)}}
+div.bg {opacity:0;z-index:-2;transition:opacity 1s ease-in-out;animation-name:z1;animation-duration:10s}
