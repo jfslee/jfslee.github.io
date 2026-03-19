@@ -31,4 +31,8 @@ db=
 ,30:{name:"reach",loc:"Renner Springs, outback NT",pr:2}
 ,31:{name:"solitary",loc:"Muttonbird Island Nature Reserve",pr:1}
 ,32:{name:"energy",loc:"Mount Walker Lookout, Hughenden",pr:1}
+,33:{name:"festival",loc:"World Square, Sydney",pr:1}
+,34:{name:"gated",loc:"Blackwattle Bay, Sydney",pr:1}
+,35:{name:"attention",loc:"River Foreshore Reserve, Parramatta",pr:1}
+,36:{name:"hi-vis",loc:"Kuala Lumpur, Malaysia",pr:1}
 }
