@@ -101,10 +101,17 @@ function rb(n){if(d.bx||d.bu){return} // Don't do anything if animation in progr
   b(bm[ri(bm.length)-1])}
 
 // Main UI loop
-function m() {d.mf++;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),(d.mh?c.sv.slice(0,1):c.sv));
-  if(!(d.ep||d.bx||d.bu)) {
+function m() {d.mf++;   // Increment frame counter
+  // One-liner to implement hue cycling animation
+  // The speed of the animation depends on whether a background transition is in progress or not (d.mf)
+  // Only the main logo (first element in sv) will be cycled if page content is hidden (based on d.mh)
+  uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),(d.mh?c.sv.slice(0,1):c.sv));
+  // Update the footer
+  if(!(d.ep||d.bx||d.bu)) { // But only if there is no forced background or load in progress
     ui('lm',"Next photo in "+((d.bnt-d.t)/1000).toFixed(1)+"s");
+    // Trigger the next background load if the timer has expired
     if(d.t>d.bnt){rb(0)}}
+  // Return to the start of the loop
   requestAnimationFrame(m)}
 
 // Responsive UI function - resize page to fit screen
@@ -155,6 +162,7 @@ var c = Object.freeze({
 })
 
 // Initial page setup
+// Limited setup for 404 page first
 if(d.ep) {c.sv.splice(3,2);ui('pp',c.i.pp)} else {
   // Set the year in the copyright footer to the current year
   ui('year',new Date().getFullYear());
