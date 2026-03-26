@@ -45,11 +45,11 @@ function uh(d,ids){
 
 // Update the footer display when a new background is shown
 function ub(){
-  es('pi').opacity=1; d.bn++;
-  ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc);
-  ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}
+  es('pi').opacity=1; d.bn++;   // Fade in footer and increment background counter
+  ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc); // Retrieve background details from db
+  ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}          // Use d.bs to calculate completion details
 
-// Display background ID n. Background data is found in bgdb.js which is loaded to variable db
+// Display background ID n. Background data is found in bgdb.js which is loaded to db
 function b(n){
   if(d.bx){return} d.bx=true;   // Don't do anything if an animation is already in progress
   d.bl.push(n); d.bl.shift();   // Push the requested background into bl
@@ -73,7 +73,7 @@ function b(n){
     // Halfway through the animation, update the footer
     setTimeout(()=>{ub()},500);
     // After the first background change, if gallery stats have not yet been displayed, then display them
-    if(d.bn==1){setTimeout(()=>{if(d.fr){ph('l')}},1250)}
+    if(d.bu||d.bn==1){setTimeout(()=>{if(d.fr){ph('l')}},1250)}
     // After the animation completes, remove the old background
     setTimeout(()=>{document.querySelectorAll('.bg').forEach(b=>{if(b!==ib){b.remove()}});
     // If a forced background is in effect, hide main page content. Otherwise schedule the next background change
@@ -122,35 +122,35 @@ function rs() {
 
 // Variable registry
 var d = {
-  fr:true,                  // This is true if the gallery stats footer has never been shown; false otherwise
-  mh:false,                 // This is true if the main page content is hidden. Controlled by pc()
-  mf:0,                     // Frame counter - increments every time m() is called
-  m0:new Date().getTime(),  // Time that the page was first loaded
-  ba:5,                     // On initial page load, choose only from the first X backgrounds
-  bc:0,                     // The ID of the background that is currently being displayed
+  fr: true,                   // This is true if the gallery stats footer has never been shown; false otherwise
+  mh: false,                  // This is true if the main page content is hidden. Controlled by pc()
+  mf: 0,                      // Frame counter - increments every time m() is called
+  m0: new Date().getTime(),   // Time that the page was first loaded
+  bc: 0,                      // The ID of the background that is currently being displayed
 
   // History of backgrounds previously shown (to avoid repetition)
   // Initial size is set to half the total number of backgrounds registered in db
   bl: new Array(Math.ceil(dm().length/2)).fill(0),
 
-  bn:0,                     // Background change counter - increments every time b() is called
-  bs:new Set(),             // The set of all backgrounds that have been seen so far
-  bx:false,                 // This is true if the animation to transition to a new background is in progress
-  bnt:0,                    // The time that the next background will be shown
+  bn: 0,                      // Background change counter - increments every time b() is called
+  bs: new Set(),              // The set of all backgrounds that have been seen so far
+  bx: false,                  // This is true if the animation to transition to a new background is in progress
+  bnt: 0,                     // The time that the next background will be shown
 
   // Initially, this is populated from URL parameters to force a specific background to be shown.
   // After first page load, this reverts to a true/false value to indicate whether a background is being forced.
-  bu:Number(new URLSearchParams(window.location.search).get('bg')),
+  bu: Number(new URLSearchParams(window.location.search).get('bg')),
   get t() {return new Date().getTime()},        // Shorthand for the current time
   get ep(){return ui('h').startsWith('404')}}   // Check if the current page is the main page or the 404 page
 
 // Constants registry
 var c = Object.freeze({
-  pw:700,ph:800,                  // Preferred width and height for responsive UI function
-  bnd:30000,                      // Initial delay until next background is shown.
-  bnv:0.2,                        // Random extra delay will be up to this proportion of bnd
-  st:['ta','tb','tc','td'],       // IDs of each tab in the main page content
-  sv:['pp','va','vb','vc','vd'],  // IDs of elements that should be colour-cycled in the main UI loop
+  pw: 700, ph: 800,               // Preferred width and height for responsive UI function
+  ba: 5,                          // On initial page load, choose only from the first X backgrounds
+  bnd: 30000,                     // Initial delay until next background is shown.
+  bnv: 0.2,                       // Random extra delay will be up to this proportion of bnd
+  st: ['ta','tb','tc','td'],      // IDs of each tab in the main page content
+  sv: ['pp','va','vb','vc','vd'], // IDs of elements that should be colour-cycled in the main UI loop
   i:{ // SVG definitions for UI icons. Icons va-vd are adapted from the public domain Material Design Icons set.
   pp:'<path d="M0-4V4H-2A2 2 0 0 1-2 0H2A2 2 0 0 0 2-4H0Z"/><circle cx="6" cy="-2" r="2"/><circle cx="-6" cy="2" r="2"/>',
   va:'<svg viewBox="0 0 24 24"><path d="M12 2C13.1 2 14 2.9 14 4S13.1 6 12 6 10 5.1 10 4 10.9 2 12 2M15.9 8.1C15.5 7.7 14.8 7 13.5 7H11C8.2 7 6 4.8 6 2H4C4 5.2 6.1 7.8 9 8.7V22H11V16H13V22H15V10.1L19 14L20.4 12.6L15.9 8.1Z"/></svg>',
@@ -175,6 +175,6 @@ if(d.ep) {c.sv.splice(3,2);ui('pp',c.i.pp)} else {
   // Assign initial state for UI elements
   es('n').opacity=0;es('c').opacity=1;sk('h');
   // Check if a forced background has been triggered
-  if(d.bu>0 && d.bu<=dm().length){b(d.bu);d.bu=true} else {rb(d.ba);d.bu=false}}
+  if(d.bu>0 && d.bu<=dm().length){b(d.bu);d.bu=true} else {rb(c.ba);d.bu=false}}
 // Dynamic resize page and start main animation loop
 rs();m();
