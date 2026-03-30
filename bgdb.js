@@ -35,4 +35,5 @@ db=
 ,34:{name:"gated",loc:"Blackwattle Bay, Sydney",pr:1}
 ,35:{name:"attention",loc:"River Foreshore Reserve, Parramatta",pr:1}
 ,36:{name:"hi-vis",loc:"Kuala Lumpur, Malaysia",pr:1}
+,37:{name:"awake",loc:"Rose Bay Marina, Sydney",pr:2}
 }
