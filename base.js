@@ -47,7 +47,8 @@ function uh(d,ids){
 function ub(){
   es('pi').opacity=1; d.bn++;   // Fade in footer and increment background counter
   ui('fi',d.bc);ui('fn',db[d.bc].name);ui('fl',db[d.bc].loc); // Retrieve background details from db
-  ui('ln',"Seen "+d.bs.size+" out of "+dm().length)}          // Use d.bs to calculate completion details
+  // Show permalink to current photo if all photos have been seen, else show completion status
+  ui('ln',d.ba?"<a href='"+d.bp+"'>Permalink to this photo</a>":"Seen "+d.bs.size+" out of "+dm().length)}
 
 // Display background ID n. Background data is found in bgdb.js which is loaded to db
 function b(n){
@@ -140,8 +141,14 @@ var d = {
   // Initially, this is populated from URL parameters to force a specific background to be shown.
   // After first page load, this reverts to a true/false value to indicate whether a background is being forced.
   bu: Number(new URLSearchParams(window.location.search).get('bg')),
-  get t() {return new Date().getTime()},        // Shorthand for the current time
-  get ep(){return ui('h').startsWith('404')}}   // Check if the current page is the main page or the 404 page
+  // Check if all photos have been seen
+  get ba(){return d.bs.size==dm().length},
+  // Permalink to the current photo
+  get bp(){return window.location.href.split('?')[0]+'?bg='+d.bc},
+  // Shorthand for the current time
+  get t() {return new Date().getTime()},
+  // Check if the current page is the main page or the 404 page
+  get ep(){return ui('h').startsWith('404')}}
 
 // Constants registry
 var c = Object.freeze({
