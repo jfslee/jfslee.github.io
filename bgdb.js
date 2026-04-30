@@ -37,4 +37,6 @@ db=
 ,36:{name:"hi-vis",loc:"Kuala Lumpur, Malaysia",pr:1}
 ,37:{name:"restless",loc:"Rose Bay Marina, Sydney",pr:2}
 ,38:{name:"empty",loc:"Angel Place, Sydney",pr:1}
+,39:{name:"stone",loc:"East Point, Darwin",pr:1}
+,40:{name:"sentinel",loc:"North Narrabeen Rockpool",pr:3}
 }
