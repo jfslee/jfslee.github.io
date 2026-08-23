@@ -17,8 +17,8 @@ function ph(i){if(i=='l'){d.fr=false} if(es(i).opacity==1){k(i)}else{s(i)}}
 
 // Toggle the visibility of the main page content. Animations are implemented in CSS.
 function pc(){ph('c'); var p=es('pp');
-  if (p.height=='30px') {d.mh=false;p.height='100px';p.opacity=1;ui('pp','unset','stroke-width')}
-  else {d.mh=true;p.height='30px';p.opacity=0.6;ui('pp',0.7,'stroke-width')}}
+  if (p.height=='30px') {d.mh=false;p.height='100px';p.opacity=1;p.filter='none';ui('pp','unset','stroke-width')}
+  else {d.mh=true;p.height='30px';p.opacity=0.6;p.filter='grayscale(0.9)';ui('pp',0.7,'stroke-width')}}
 
 // Assign color x to element i. Different behaviours are implemented for different content types.
 function cc(i,x){var n = e(i);

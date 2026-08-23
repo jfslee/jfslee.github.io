@@ -5,8 +5,8 @@ function k(i){es(i).opacity=0;es(i).display='none'}
 function s(i){es(i).opacity=1;es(i).display='block'}
 function sk(i){c.st.filter(j=>j!=i).forEach(x=>k(x));s(i)}
 function ph(i){if(i=='l'){d.fr=false}if(es(i).opacity==1){k(i)}else{s(i)}}
-function pc(){ph('c');var p=es('pp');if(p.height=='30px'){d.mh=false;p.height='100px';p.opacity=1;ui('pp','unset','stroke-width')}
-else{d.mh=true;p.height='30px';p.opacity=0.6;ui('pp',0.7,'stroke-width')}}
+function pc(){ph('c');var p=es('pp');if(p.height=='30px'){d.mh=false;p.height='100px';p.opacity=1;p.filter='none';ui('pp','unset','stroke-width')}
+else{d.mh=true;p.height='30px';p.opacity=0.6;p.filter='grayscale(0.9)';ui('pp',0.7,'stroke-width')}}
 function cc(i,x){var n=e(i);if(n.nodeName=='svg'){n.style.stroke=x}
 else{n.style.color=x;if(n.getElementsByTagName('svg').length==1){n.getElementsByTagName('svg')[0].style.fill=x}}}
 function ch(h){h=Math.trunc(h)%1530;if(h<0){return 1530-Math.abs(h)}else{return(h)}}

@@ -3,7 +3,7 @@
 .bb {backdrop-filter:blur(3px)}
 html {height:100%}
 body {pointer-events:none;height:100vh;background:#000;margin:5%;color:#ddd;font-size:28px;font-weight:256;text-align:center;line-height:150%;overflow:hidden;font-variation-settings:"opsz"17}
-svg {pointer-events:auto;filter:drop-shadow(0 0 0.2em rgba(0,0,0,.6)) drop-shadow(0 0 0.4em rgba(0,0,0,.4));transition:opacity 0.5s 0.5s, height 0.5s, stroke-width 0.5s 0.25s}
+svg {pointer-events:auto;filter:drop-shadow(0 0 0.2em rgba(0,0,0,.6)) drop-shadow(0 0 0.4em rgba(0,0,0,.4));transition:opacity 0.5s 0.5s, height 0.5s, stroke-width 0.5s 0.25s, filter 3s}
 svg:hover {filter:drop-shadow(0 0 0.2em rgba(255,255,255,.6)) drop-shadow(0 0 0.4em rgba(0,0,0,.4))}
 table {table-layout:fixed;width:444px;margin:auto}
 tr {pointer-events:auto;height:112px}
