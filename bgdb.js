@@ -39,4 +39,6 @@ db=
 ,38:{name:"empty",loc:"Angel Place, Sydney",pr:1}
 ,39:{name:"stone",loc:"East Point, Darwin",pr:1}
 ,40:{name:"sentinel",loc:"North Narrabeen Rockpool",pr:3}
+,41:{name:"bloom",loc:"Royal Botanic Gardens, Sydney",pr:3}
+,42:{name:"scout",loc:"The Domain, Sydney",pr:2}
 }
