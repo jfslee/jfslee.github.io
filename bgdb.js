@@ -7,7 +7,7 @@ db=
 ,6:{name:"wander",loc:"Buffalo Creek Reserve, Sydney",pr:6}
 ,7:{name:"breeze",loc:"Market Street, Sydney",pr:8}
 ,8:{name:"icon",loc:"Sydney Opera House",pr:3}
-,9:{name:"remembrance",loc:"Bukit Kledang, Menglembu",pr:6}
+,9:{name:"remembrance",loc:"Bukit Kledang, Menglembu",pr:5}
 ,10:{name:"dreaming",loc:"Ulur&#x0331;u-Kata Tjut&#x0331;a National Park",pr:2}
 ,11:{name:"return",loc:"Sydney Airport Gateway",pr:1}
 ,12:{name:"endless",loc:"Barkly Tablelands, outback NT",pr:4}
@@ -38,7 +38,8 @@ db=
 ,37:{name:"restless",loc:"Rose Bay Marina, Sydney",pr:2}
 ,38:{name:"empty",loc:"Angel Place, Sydney",pr:1}
 ,39:{name:"stone",loc:"East Point, Darwin",pr:1}
-,40:{name:"sentinel",loc:"North Narrabeen Rockpool",pr:3}
-,41:{name:"bloom",loc:"Royal Botanic Gardens, Sydney",pr:3}
-,42:{name:"scout",loc:"The Domain, Sydney",pr:2}
+,40:{name:"sentinel",loc:"North Narrabeen Rockpool",pr:2}
+,41:{name:"bloom",loc:"Royal Botanic Gardens, Sydney",pr:6}
+,42:{name:"scout",loc:"The Domain, Sydney",pr:3}
+,43:{name:"aura",loc:"Bowral, Southern Highlands, NSW",pr:1}
 }
