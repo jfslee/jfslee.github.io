@@ -92,8 +92,10 @@ function df(){return dm().filter(f=>!d.bl.includes(f[0]))}
 function ax(a){return a.map((i)=>new Array(i[1]).fill(i[0])).flat()}
 // Get a random integer between 1 and n inclusive
 function ri(n){return Math.trunc(Math.random()*n)+1}
+// Calculate a random scale factor
+function rp(s){return 1+(s*1/Math.random())}
 // Calculate the time that the next background should be displayed
-function ds(){d.bnt=d.t+c.bnd+d.mf+ri((c.bnd+d.mf)*c.bnv)}
+function ds(){return d.bnt=d.t+c.bnd+ri((d.mf+(d.bs.size<<10))*rp(c.bnv))}
 
 // Randomly choose next background to display. If n is specified, limit choice to the first n entries in db
 function rb(n){if(d.bx||d.bu){return} // Don't do anything if animation in progress or background choice is forced
@@ -155,7 +157,7 @@ var c = Object.freeze({
   pw: 700, ph: 800,               // Preferred width and height for responsive UI function
   ba: 5,                          // On initial page load, choose only from the first X backgrounds
   bnd: 30000,                     // Initial delay until next background is shown.
-  bnv: 0.2,                       // Random extra delay will be up to this proportion of bnd
+  bnv: 0.01,                      // Scale factor for random extra delay
   st: ['ta','tb','tc','td'],      // IDs of each tab in the main page content
   sv: ['pp','va','vb','vc','vd'], // IDs of elements that should be colour-cycled in the main UI loop
   i:{ // SVG definitions for UI icons. Icons va-vd are adapted from the public domain Material Design Icons set.
