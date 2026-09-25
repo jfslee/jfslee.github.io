@@ -95,7 +95,7 @@ function ri(n){return Math.trunc(Math.random()*n)+1}
 // Calculate a random scale factor
 function rp(s){return 1+(s*1/Math.random())}
 // Calculate the time that the next background should be displayed
-function ds(){return d.bnt=d.t+c.bnd+ri((d.mf+(d.bs.size<<10))*rp(c.bnv))}
+function ds(){d.bnt=d.t+c.bnd+ri((d.mf+(d.bs.size<<10))*rp(c.bnv))}
 
 // Randomly choose next background to display. If n is specified, limit choice to the first n entries in db
 function rb(n){if(d.bx||d.bu){return} // Don't do anything if animation in progress or background choice is forced

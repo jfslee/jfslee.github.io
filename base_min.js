@@ -26,7 +26,7 @@ function df(){return dm().filter(f=>!d.bl.includes(f[0]))}
 function ax(a){return a.map((i)=>new Array(i[1]).fill(i[0])).flat()}
 function ri(n){return Math.trunc(Math.random()*n)+1}
 function rp(s){return 1+(s*1/Math.random())}
-function ds(){return d.bnt=d.t+c.bnd+ri((d.mf+(d.bs.size<<10))*rp(c.bnv))}
+function ds(){d.bnt=d.t+c.bnd+ri((d.mf+(d.bs.size<<10))*rp(c.bnv))}
 function rb(n){if(d.bx||d.bu){return}
 var bm=ax(x(n)?n>0?df().slice(0,n):d.bs.size<dm().length?df().filter(f=>!d.bs.has(f[0])):df():df());b(bm[ri(bm.length)-1])}
 function m(){d.mf++;uh(d.mf+ch(d.m0)+(d.bx?ch(d.t):0),(d.mh?c.sv.slice(0,1):c.sv));if(!(d.ep||d.bx||d.bu)){ui('lm',"Next photo in "+((d.bnt-d.t)/1000).toFixed(1)+"s");if(d.t>d.bnt){rb(0)}}
