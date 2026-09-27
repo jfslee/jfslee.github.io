@@ -1,5 +1,6 @@
 User-agent: *
-Content-Signal: ai-train=no, search=yes, ai-input=yes
+Content-Signal: search=yes, ai-input=yes. ai-train=no
+Content-Usage: search=y, ai-use=y, train-ai=n
 Allow: /
 
 User-agent: *
